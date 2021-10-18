@@ -1,0 +1,129 @@
+body {
+  margin: 20px;
+  padding: 20px;
+}
+
+.card-body {
+  background-color: #fceaea;
+  border-radius: 30px;
+  max-width: fit-content;
+}
+
+.card-header {
+  background-color: transparent;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 48px;
+  font-weight: 900;
+}
+
+.current-temp {
+  font-size: 34px;
+  line-height: 48px;
+  font-weight: 800;
+}
+
+#temp-c-unit {
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 600;
+  color: #3b2c85;
+}
+
+.temp-c-units {
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 600;
+  color: #3b2c85;
+}
+
+#temp-f-unit {
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 600;
+  color: #3b2c85;
+}
+
+.temp-f-units {
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 600;
+  color: #3b2c85;
+}
+
+.temp-description {
+  font-weight: bold;
+  font-style: italic;
+  color: #3b2c85;
+}
+
+.row {
+  margin-top: 50px;
+}
+.col {
+  margin-bottom: 5px;
+}
+
+.top,
+.bottom {
+  position: relative;
+  top: -50px;
+  left: 500px;
+}
+
+.weekdays {
+  margin-top: 50px;
+}
+
+.weather-app {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.input-group {
+  margin-top: 15px;
+}
+
+#city-input {
+  width: 50%;
+  border-radius: 30px;
+  padding: 5px;
+  height: 50px;
+  background: #fceaea;
+  border: 2px solid #0066a2;
+  text-align: center;
+}
+
+#search-button {
+  margin-left: 2%;
+  border-radius: 30px;
+  background: #0066a2;
+  color: #fceaea;
+  border-style: outset;
+  border: 2px solid #0066a2;
+  padding: 12px 24px;
+  text-shadow: none;
+}
+
+#current-location-button {
+  margin-left: 3%;
+  border-radius: 30px;
+  background: #0066a2;
+  color: #fceaea;
+  border-style: outset;
+  border: 2px solid #0066a2;
+  padding: 12px 24px;
+  text-shadow: none;
+}
+
+.footnote {
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 0;
+  text-align: right;
+  font-style: italic;
+  font-size: xx-small;
+}
