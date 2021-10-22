@@ -109,6 +109,12 @@ function showTemperature(response) {
   currentHumidity.innerHTML = ` Humidity: ${Math.round(
     response.data.main.humidity
   )} `;
+  let currentIcon = document.querySelector("#icon");
+  currentIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentIcon.setAttribute("alt", response.data.weather[0].description);
   let convertToFah = document.querySelector("#fahrenheit-link");
   let currentTempC = `${Math.round(response.data.main.temp)}`;
   convertToFah.innerHTML = `| ${Math.round(
