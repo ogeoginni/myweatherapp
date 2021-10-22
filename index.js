@@ -21,7 +21,7 @@ function changeTime() {
     minutes = `0${minutes}`;
   }
   let h5 = document.querySelector("#current-day-time");
-  h5.innerHTML = `Last updated: ${presentDay} ${hours}:${minutes}`;
+  h5.innerHTML = ` ${presentDay} ${hours}:${minutes}`;
 }
 
 function changeTime2() {
@@ -47,7 +47,7 @@ function changeTime2() {
     minutes = `0${minutes}`;
   }
   let h5 = document.querySelector("#current-day-time");
-  h5.innerHTML = `Last updated: ${presentDay} ${hours}:${minutes}`;
+  h5.innerHTML = ` ${presentDay} ${hours}:${minutes}`;
 }
 
 let now = new Date();
@@ -72,7 +72,7 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 let h5 = document.querySelector("#current-day-time");
-h5.innerHTML = `Last updated: ${presentDay} ${hours}:${minutes}`;
+h5.innerHTML = ` ${presentDay} ${hours}:${minutes}`;
 let form = document.querySelector("#city-name");
 form.addEventListener("submit", changeTime);
 let presentLocation = document.querySelector("#current-location-button");
@@ -138,7 +138,6 @@ function showCurrentLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let units = "metric";
-
   let apiKey = "be786a95f466ebdeaee3f262be3e25cd";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
