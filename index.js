@@ -102,13 +102,11 @@ function showTemperature(response) {
   let tempDescription = document.querySelector("#temp-description");
   tempDescription.innerHTML = response.data.weather[0].main;
   let currentFeel = document.querySelector("#feeling");
-  currentFeel.innerHTML = ` Feels like: ${Math.round(
-    response.data.main.feels_like
-  )}° `;
+  currentFeel.innerHTML = ` ${Math.round(response.data.main.feels_like)}° `;
   let currentHumidity = document.querySelector("#humidity");
-  currentHumidity.innerHTML = ` Humidity: ${Math.round(
-    response.data.main.humidity
-  )} `;
+  currentHumidity.innerHTML = ` ${Math.round(response.data.main.humidity)} `;
+  let currentWind = document.querySelector("#wind");
+  currentWind.innerHTML = Math.round(response.data.wind.speed);
   let currentIcon = document.querySelector("#icon");
   currentIcon.setAttribute(
     "src",
