@@ -117,9 +117,7 @@ function showTemperature(response) {
   heading.innerHTML = `    ${response.data.name}`;
   let currentTemp = document.querySelector("#current-temp");
   celsiusTemperature = response.data.main.temp;
-  currentTemp.innerHTML = `${Math.round(
-    celsiusTemperature
-  )}  <a href="#"  id ="temp-c-unit" class = active ><sup>°C</sup></a><span class="temp-c-units"></span`;
+  currentTemp.innerHTML = Math.round(celsiusTemperature);
   let tempDescription = document.querySelector("#temp-description");
   tempDescription.innerHTML = response.data.weather[0].main;
   let currentFeel = document.querySelector("#feeling");
@@ -134,12 +132,6 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentIcon.setAttribute("alt", response.data.weather[0].description);
-  let convertToFah = document.querySelector("#fahrenheit-link");
-  let currentTempC = `${Math.round(response.data.main.temp)}`;
-  convertToFah.innerHTML = `| ${Math.round(
-    currentTempC * 1.8 + 32
-  )}  <a href="#"  id ="temp-c-unit" class = active ><sup>°F</sup></a><span class="temp-f-units"></span`;
-  console.log(convertToFah);
 }
 
 function showCurrentLocation(position) {

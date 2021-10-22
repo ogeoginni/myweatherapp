@@ -31,10 +31,22 @@ h1 {
   color: #6d42c7;
 }
 
-.current-temp {
-  font-size: 34px;
-  line-height: 48px;
-  font-weight: 800;
+.weather-temperature img {
+  margin-right: 5px;
+  height: 74px;
+  width: 74px;
+}
+
+.weather-temperature strong {
+  font-size: 64px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+  font-size: 16px;
+  position: relative;
+  top: -34px;
 }
 
 #temp-c-unit {
@@ -42,6 +54,13 @@ h1 {
   line-height: 44px;
   font-weight: 600;
   color: #3b2c85;
+  text-decoration: none;
+}
+
+#temp-c-unit .active {
+  cursor: default;
+  color: #212529;
+  text-decoration: none;
 }
 
 .temp-c-units {
@@ -49,6 +68,13 @@ h1 {
   line-height: 44px;
   font-weight: 600;
   color: #3b2c85;
+  text-decoration: none;
+}
+
+#temp-c-units .active {
+  cursor: default;
+  color: #212529;
+  text-decoration: none;
 }
 
 #temp-f-unit {
@@ -70,6 +96,11 @@ h1 {
 }
 .col {
   margin-bottom: 5px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 li {
