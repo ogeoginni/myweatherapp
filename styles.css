@@ -49,46 +49,22 @@ h1 {
   top: -34px;
 }
 
-#temp-c-unit {
-  font-size: 30px;
-  line-height: 44px;
-  font-weight: 600;
-  color: #3b2c85;
+#celsius-link {
   text-decoration: none;
 }
 
-#temp-c-unit .active {
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+.weather-temperature .active {
+  color: black;
   cursor: default;
-  color: #212529;
   text-decoration: none;
 }
 
-.temp-c-units {
-  font-size: 30px;
-  line-height: 44px;
-  font-weight: 600;
-  color: #3b2c85;
+.weather-temperature .active:hover {
   text-decoration: none;
-}
-
-#temp-c-units .active {
-  cursor: default;
-  color: #212529;
-  text-decoration: none;
-}
-
-#temp-f-unit {
-  font-size: 30px;
-  line-height: 44px;
-  font-weight: 600;
-  color: #3b2c85;
-}
-
-.temp-f-units {
-  font-size: 30px;
-  line-height: 44px;
-  font-weight: 600;
-  color: #3b2c85;
 }
 
 .row {
