@@ -96,8 +96,9 @@ function showTemperature(response) {
   let heading = document.querySelector("#current-city");
   heading.innerHTML = `    ${response.data.name}`;
   let currentTemp = document.querySelector("#current-temp");
+  celsiusTemperature = response.data.main.temp;
   currentTemp.innerHTML = `${Math.round(
-    response.data.main.temp
+    celsiusTemperature
   )}<span class="temp-c-units"><sup>°C</sup></span`;
   let tempDescription = document.querySelector("#temp-description");
   tempDescription.innerHTML = response.data.weather[0].main;
