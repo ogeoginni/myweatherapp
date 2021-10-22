@@ -78,10 +78,7 @@ form.addEventListener("submit", changeTime);
 let presentLocation = document.querySelector("#current-location-button");
 presentLocation.addEventListener("click", changeTime2);
 
-function search(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#city-input");
-  let city = searchInput.value;
+function search(city) {
   let apiKey = "be786a95f466ebdeaee3f262be3e25cd";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let units = "metric";
@@ -89,8 +86,31 @@ function search(event) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityName = document.querySelector("#current-city");
+  search(cityName.value);
+}
+
+let form3 = document.querySelector("#current-city");
+form3.addEventListener("submit", handleSubmit);
+
+function search(city) {
+  let apiKey = "be786a95f466ebdeaee3f262be3e25cd";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let units = "metric";
+  let apiUrl = `${apiEndpoint}?q=${city}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#city-input");
+  search(searchInput.value);
+}
+
 let form2 = document.querySelector("#city-name");
-form2.addEventListener("submit", search);
+form2.addEventListener("submit", handleSubmit);
 
 function showTemperature(response) {
   let heading = document.querySelector("#current-city");
@@ -140,3 +160,5 @@ function getCurrentLocation(event) {
 
 let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("click", getCurrentLocation);
+
+search("Abuja");
