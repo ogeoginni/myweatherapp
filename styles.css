@@ -72,11 +72,18 @@ h1 {
   margin-bottom: 5px;
 }
 
-.top,
-.bottom {
-  position: relative;
-  top: -50px;
-  left: 500px;
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 250;
+  line-height: 19px;
+  color: #6d42c7;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 
 .weekdays {
