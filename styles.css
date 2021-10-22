@@ -4,7 +4,7 @@ body {
 }
 
 .card-body {
-  background-color: #fceaea;
+  background-color: #ebe6e6;
   border-radius: 30px;
   max-width: fit-content;
 }
@@ -135,7 +135,7 @@ li:first-letter {
   border-radius: 30px;
   padding: 5px;
   height: 50px;
-  background: #fceaea;
+  background: #ebe6e6;
   border: 2px solid #662eed;
   text-align: center;
 }
