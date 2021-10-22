@@ -119,7 +119,7 @@ function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   currentTemp.innerHTML = `${Math.round(
     celsiusTemperature
-  )}<span class="temp-c-units"><sup>°C</sup></span`;
+  )}  <a href="#"  id ="temp-c-unit" class = active ><sup>°C</sup></a><span class="temp-c-units"></span`;
   let tempDescription = document.querySelector("#temp-description");
   tempDescription.innerHTML = response.data.weather[0].main;
   let currentFeel = document.querySelector("#feeling");
