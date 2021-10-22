@@ -21,7 +21,7 @@ function changeTime() {
     minutes = `0${minutes}`;
   }
   let h5 = document.querySelector("#current-day-time");
-  h5.innerHTML = `${presentDay} ${hours}:${minutes}`;
+  h5.innerHTML = `Last updated: ${presentDay} ${hours}:${minutes}`;
 }
 
 function changeTime2() {
@@ -47,7 +47,7 @@ function changeTime2() {
     minutes = `0${minutes}`;
   }
   let h5 = document.querySelector("#current-day-time");
-  h5.innerHTML = `${presentDay} ${hours}:${minutes}`;
+  h5.innerHTML = `Last updated: ${presentDay} ${hours}:${minutes}`;
 }
 
 let now = new Date();
