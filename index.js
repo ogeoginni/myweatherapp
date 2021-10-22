@@ -138,7 +138,7 @@ function showTemperature(response) {
   let currentTempC = `${Math.round(response.data.main.temp)}`;
   convertToFah.innerHTML = `| ${Math.round(
     currentTempC * 1.8 + 32
-  )}<span class="temp-f-units"><sup>°F</sup></span`;
+  )}  <a href="#"  id ="temp-c-unit" class = active ><sup>°F</sup></a><span class="temp-f-units"></span`;
   console.log(convertToFah);
 }
 
