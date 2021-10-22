@@ -72,7 +72,7 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 let h5 = document.querySelector("#current-day-time");
-h5.innerHTML = `${presentDay} ${hours}:${minutes}`;
+h5.innerHTML = `Last updated: ${presentDay} ${hours}:${minutes}`;
 let form = document.querySelector("#city-name");
 form.addEventListener("submit", changeTime);
 let presentLocation = document.querySelector("#current-location-button");

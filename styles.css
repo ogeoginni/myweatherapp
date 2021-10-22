@@ -19,6 +19,18 @@ h1 {
   font-weight: 900;
 }
 
+#current-day-time {
+  font-size: 18px;
+  line-height: 14px;
+  font-weight: 250;
+  color: #6d42c7;
+}
+
+.temp-description {
+  font-weight: bold;
+  color: #6d42c7;
+}
+
 .current-temp {
   font-size: 34px;
   line-height: 48px;
@@ -50,12 +62,6 @@ h1 {
   font-size: 30px;
   line-height: 44px;
   font-weight: 600;
-  color: #3b2c85;
-}
-
-.temp-description {
-  font-weight: bold;
-  font-style: italic;
   color: #3b2c85;
 }
 
@@ -116,14 +122,4 @@ h1 {
   border: 2px solid #0066a2;
   padding: 12px 24px;
   text-shadow: none;
-}
-
-.footnote {
-  display: block;
-  margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 0;
-  text-align: right;
-  font-style: italic;
-  font-size: xx-small;
 }
