@@ -78,6 +78,29 @@ form.addEventListener("submit", changeTime);
 let presentLocation = document.querySelector("#current-location-button");
 presentLocation.addEventListener("click", changeTime2);
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class = "row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class = "col-2">
+                <div class = "weather-forecast-day"> ${day}</div>
+                <img src = "http://openweathermap.org/img/wn/01d@2x.png" alt ="" width ="40"/>
+                <div class ="weather-forecast-temperatures">
+                  <span class = "weather-forecast-temperature-max">18°</span>
+                  <span class = "weather-forecast-temperature-min">12°</span>
+                </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+showForecast();
+
 function search(city) {
   let apiKey = "be786a95f466ebdeaee3f262be3e25cd";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
