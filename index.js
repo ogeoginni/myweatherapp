@@ -20,8 +20,9 @@ function changeTime() {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   let h5 = document.querySelector("#current-day-time");
-  h5.innerHTML = ` ${presentDay} ${hours}:${minutes}`;
+  h5.innerHTML = ` ${presentDay} ${hours}:${minutes} `;
 }
 
 function changeTime2() {
@@ -81,7 +82,7 @@ presentLocation.addEventListener("click", changeTime2);
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   return days[day];
 }
