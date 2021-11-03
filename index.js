@@ -78,10 +78,14 @@ form.addEventListener("submit", changeTime);
 let presentLocation = document.querySelector("#current-location-button");
 presentLocation.addEventListener("click", changeTime2);
 
-function showForecast() {
+showForecast();
+
+function showForecast(response) {
+  console.log(response);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class = "row">`;
+
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
   days.forEach(function (day) {
     forecastHTML =
@@ -99,7 +103,13 @@ function showForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-showForecast();
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "be786a95f466ebdeaee3f262be3e25cd";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units = metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(showForecast);
+}
 
 function search(city) {
   let apiKey = "be786a95f466ebdeaee3f262be3e25cd";
